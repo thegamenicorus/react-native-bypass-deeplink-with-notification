@@ -5,7 +5,7 @@
 Linking.getInitialURL() cannot receive notification url (url always null) in react-native side. 
 
 ### Cause:
-in RCTLinkingManager.m , `getInitialURL` is waiting for some data in `bridge.launchOptions` property [#issue-5047(322831459)](https://github.com/facebook/react-native/issues/5047#issuecomment-322831459)
+in RCTLinkingManager.m , `getInitialURL` is waiting for some data in `bridge.launchOptions` property [#issue-5047(322290739)](https://github.com/facebook/react-native/issues/5047#issuecomment-322290739)
 
 ### Quick fix:
 in RCTLinkingManager.m at `RCT_EXPORT_METHOD(getInitialURL)`, set `NSURL *initialURL = url;` 
