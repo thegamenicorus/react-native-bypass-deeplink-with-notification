@@ -2,7 +2,7 @@
 **note: this repository is just a quick fix, not an elegant solution at all.
 
 ### Problem:
-When press on notification bar (contain depp link url) and the iOS app is in closed state(terminated). Then `Linking.getInitialURL()` cannot receive notification url (url always null) in react-native side. 
+When press on notification bar (contain deep link url) and the iOS app is in closed state(terminated). Then `Linking.getInitialURL()` cannot receive notification url (url always null) in react-native side. 
 
 ### Cause:
 in RCTLinkingManager.m , `getInitialURL` is waiting for some data in `bridge.launchOptions` property [#issue-5047(322290739)](https://github.com/facebook/react-native/issues/5047#issuecomment-322290739)
